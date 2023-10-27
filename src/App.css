@@ -1,0 +1,157 @@
+*{
+  margin: 0;
+  font-style: normal;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  
+}
+
+.has-height-90 {
+  height: 90px;
+}
+
+.has-max-width-400 {
+  max-width: 400px;
+}
+
+.is-fixed {
+  position: fixed;
+  width: 100%;
+}
+
+.is-top-layer {
+  z-index: 100;
+}
+
+.has-text-primary-orange {
+  color: #D87D4A;
+}
+
+.has-primary-orange-background {
+  background-color: #D87D4A;
+}
+
+.has-secondary-orange-background {
+  background-color: #FBAF85;
+}
+
+.has-background-less-white {
+  background-color: #F1F1F1;
+}
+
+.has-background-less-black {
+  background-color: #101010;
+}
+
+.is-text-h4 {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+
+.is-text-h5 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.714px;
+}
+
+.is-text-h6{
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.286px;
+}
+
+.is-text-subtext {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 10px;
+}
+
+.is-text-subtitle{
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px; /* 192.308% */
+  letter-spacing: 0.929px;
+}
+
+.is-text-body {
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.is-text-label {
+  font-size: 12px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: -0.214px;
+}
+
+.has-ocacity-5 {
+  opacity: 0.5;
+}
+
+.has-ocacity-75{
+  opacity: 0.75;
+}
+
+.is-width-5{
+  width: 50%;
+}
+
+.is-width-9{
+  width: 90%;
+}
+
+.is-transform-y-50 {
+  transform: translateY(50%);
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  margin-top: -50px; /* Amount to cut off from the top */
+}
+
+.button-no-border {
+  border: none;
+}
+
+.is-rounded-8px {
+  border-radius: 8px;
+}
+
+.navbar-padding{
+  padding: 1rem 1rem;
+}
+
+@media (min-width: 769px) {
+  .modal-content {
+   transform: translateY(10%);
+  }
+
+  .navbar-padding{
+    padding: 1rem 3rem;
+  }
+  
+}
+
+.z-1000 {
+  z-index: 1000;
+}
