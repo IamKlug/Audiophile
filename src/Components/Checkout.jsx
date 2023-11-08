@@ -15,15 +15,15 @@ export default function Checkout() {
   return (
     <>
       <div
-        className={`modal ${
-          isMenuOpen && "is-active"
+        className={`my-modal ${
+          isMenuOpen && "my-modal-active"
         }`}
       >
         <div
-          className="modal-background"
+          className="my-modal-background"
           onClick={() => setIsMenuOpen(false)}
         ></div>
-        <div className="modal-content my-6 py-4">
+        <div className="my-modal-content">
           <div className="box is-flex is-flex-direction-column m-3">
             <svg className="my-4" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
               <g fill="none" fillRule="evenodd">
@@ -87,6 +87,7 @@ export default function Checkout() {
           </div>
         </div>
       </div>
+      <div className="p-2 m-5"></div>
       <form onSubmit={handleContinueAndPay} action="" method="post">
         <p className="is-text-body has-text-grey is-opacity-5 is-clickable m-3"
         onClick={() => navigate(-1)}>

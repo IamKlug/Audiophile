@@ -10,8 +10,8 @@ export default function ProductCategoryCard({ imgPath, title }) {
 
   return (
     <div className="column is-flex is-flex-direction-column is-justify-content-center is-align-items-center ">
-      <figure className="image is-128x128">
-        <img className="is-transform-y-50" src={`${imgPath}`} />
+      <figure className="image is-128x128 is-transform-y-50">
+        <img className="" src={`${imgPath}`} />
       </figure>
       <div className="box is-flex is-flex-direction-column is-flex-grow-1 is-width-9 has-background-less-white p-6">
         <h6 className="is-text-h6 has-text-black is-uppercase has-text-centered m-1">

@@ -117,6 +117,14 @@ letter-spacing: -0.214px;
   width: 90%;
 }
 
+.is-width-10{
+  width: 100%;
+}
+
+.is-transform-y-below-nav {
+  transform: translateY(57px);
+}
+
 .is-transform-y-50 {
   transform: translateY(50%);
 }
@@ -142,16 +150,75 @@ letter-spacing: -0.214px;
 }
 
 @media (min-width: 769px) {
-  .modal-content {
-   transform: translateY(10%);
+  .my-modal-content {
+    padding: 1rem 3rem;
   }
 
   .navbar-padding{
-    padding: 1rem 3rem;
+    padding: .25rem 3rem;
   }
   
 }
 
 .z-1000 {
   z-index: 1000;
+}
+.my-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  z-index: 100;
+}
+
+.my-modal.my-modal-active {
+  display: flex;
+}
+
+.my-modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(10, 10, 10, 0.7); 
+  z-index: 100;
+}
+
+.my-modal-content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 1001; 
+  padding: 1rem 0.5rem;
+}
+
+.has-max-width-400{
+  max-width: 400px;
+}
+
+.my-modal-content-menu {
+  display: absolute;
+  width: 100vw;
+  z-index: 1001; 
+}
+
+@media (min-width: 769px) {
+  .my-modal-content {
+    padding: 1rem 3rem;
+  }
+}
+
+
+.my-modal-content-inner{
+  width: 100%;
+}
+
+@media (max-width: 769px){
+.overflow-auto {
+  overflow: auto;
+  height: 100vh;
+}
 }

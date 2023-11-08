@@ -26,7 +26,7 @@ export default function Home() {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </p>
-          <Link to={`/ProductCardDetail/e5f6g7h8`} className="is-flex">
+          <Link to={`/ProductCardDetail/a1b2c3d4`} className="is-flex">
             <button className="button has-primary-orange-background is-uppercase has-primary-orange-background is-text-subtitle has-text-white is-shadowless">
               See Product
             </button>

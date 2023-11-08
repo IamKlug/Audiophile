@@ -9,7 +9,7 @@ export default function NavBar() {
     <nav className="navbar is-flex is-justify-content-space-between is-align-items-center has-background-black has-height-25 navbar-padding  z-1000">
       <svg
         className="is-clickable is-hidden-desktop"
-        onClick={() => setIsMenuOpen(true)}
+        onClick={() => setIsMenuOpen(prev => !prev)}
         xmlns="http://www.w3.org/2000/svg"
         width="16"
         height="15"
@@ -64,7 +64,7 @@ export default function NavBar() {
       </div>
       <svg
         className="is-clickable"
-        onClick={() => setIsCartOpen(true)}
+        onClick={() => setIsCartOpen(prev => !prev)}
         xmlns="http://www.w3.org/2000/svg"
         width="23"
         height="20"
