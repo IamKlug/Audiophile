@@ -39,7 +39,7 @@ export default function CartModal() {
         className="my-modal-background"
         onClick={() => setIsCartOpen(false)}
       ></div>
-      <div className="my-modal-content has-max-width-400 is-transform-y-below-nav my-6">
+      <div className="my-modal-content has-max-width-400 is-transform-y-below-nav">
         <div className="box my-modal-content-inner is-flex is-flex-direction-column">
           <div className="is-flex is-justify-content-space-between is-align-items-center m-2 mb-6">
             <p className="has-text-black is-text-h6 is-uppercase">

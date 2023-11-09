@@ -222,3 +222,16 @@ letter-spacing: -0.214px;
   height: 100vh;
 }
 }
+
+@media (min-width: 769px){
+.checkout-container {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: stretch;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+
+
+}
+}

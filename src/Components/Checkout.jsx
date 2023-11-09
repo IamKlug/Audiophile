@@ -87,13 +87,13 @@ export default function Checkout() {
           </div>
         </div>
       </div>
-      <div className="p-2 m-5"></div>
       <form onSubmit={handleContinueAndPay} action="" method="post">
         <p className="is-text-body has-text-grey is-opacity-5 is-clickable m-3"
         onClick={() => navigate(-1)}>
           Go Back
         </p>
-        <div className="box is-shadowless is-flex is-flex-direction-column m-3">
+        <div className="checkout-container">
+        <div className="box is-shadowless is-flex is-flex-direction-column is-flex-grow-2 m-3">
           <h1 className="is-uppercase title has-text-black m-5">Checkout</h1>
           <h6 className="is-text-subtitle has-text-primary-orange is-uppercase mb-3">
             Billing Details
@@ -150,7 +150,7 @@ export default function Checkout() {
           <input className="input mb-2" type="text" placeholder="6891" />
         </div>
 
-        <div className="box is-shadowless is-flex is-flex-direction-column m-3 mb-6">
+        <div className=" has-background-white is-flex is-flex-direction-column is-flex-grow-1 is-shadowless p-3 m-3 mb-6">
           <p className="has-text-black is-text-h6 is-uppercase m-4">Summary</p>
           {cart.map((item) => (
             <div
@@ -215,9 +215,10 @@ export default function Checkout() {
               ).toFixed()}
             </p>
           </div>
-          <button className="button is-flex is-flex-grow-1 has-primary-orange-background is-uppercase has-primary-orange-background is-text-subtitle has-text-white is-shadowless my-4">
+          <button className="button is-flex has-primary-orange-background is-uppercase has-primary-orange-background is-text-subtitle has-text-white is-shadowless my-4">
             Continue & Pay
           </button>
+        </div>
         </div>
       </form>
     </>

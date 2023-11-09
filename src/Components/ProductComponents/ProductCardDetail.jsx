@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import RecommendedProduct from "./RecommendedProduct";
 
 export default function ProductCardDetail() {
-  const { productList, setCart, screenSize } = useContext(StateContext);
+  const { productList, cart, setCart, screenSize } = useContext(StateContext);
   const { productId } = useParams();
   const [count, setCount] = useState(1);
   const [selectedProduct, setSelectedProduct] = useState([]);
@@ -31,8 +31,24 @@ export default function ProductCardDetail() {
   console.log(product);
 
   const handleAddToCart = () => {
-    setCart((cart) => [...cart, { product: product, quantity: count }]);
+    setCart((cart) => {
+      // Check if the product is already in the cart
+      const productExists = cart.find((item) => item.product.id === product.id);
+  
+      if (productExists) {
+        // If product exists, just increment the quantity
+        return cart.map((item) =>
+          item.product.id === product.id
+            ? { ...item, quantity: count }
+            : item
+        );
+      } else {
+        // If product doesn't exist, add it to the cart
+        return [...cart, { product: product, quantity: count }];
+      }
+    });
   };
+  
 
   return (
     <>
