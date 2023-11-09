@@ -9,11 +9,11 @@ export default function HomePageRecomendations() {
     <div className="is-flex is-flex-direction-column is-align-items-center">
       <div className="p-3 m-6"></div>
 
-      <div className="columns is-desktop has-primary-orange-background m-6">
+      <div className="columns is-desktop has-primary-orange-background is-rounded-8px m-6">
         <div className="column is-flex is-justify-content-center px-6 m-5 is-shadowless has-primary-orange-background">
           <figure className="is-flex is-justify-content-center mx-6">
             <img
-              className="has-primary-orange-background mx-6"
+              className="has-primary-orange-background mx-6 "
               src={`assets/home/${screenSize}/image-speaker-zx9.png`}
               alt="home"
             />
@@ -50,7 +50,7 @@ export default function HomePageRecomendations() {
             <Link to={`/ProductCardDetail/m3n4o5p6`}>
               <button
                 // onClick={handleClick}
-                className="button is-outlined is-black is-uppercase is-text-subtitle has-text-black is-shadowless m-2"
+                className="is-uppercase is-text-subtitle has-text-black is-shadowless m-2"
               >
                 See Product
               </button>
@@ -72,7 +72,7 @@ export default function HomePageRecomendations() {
         </h1>
         <Link to={`/ProductCardDetail/u1v2w3x4`}>
           <button
-            className="button is-outlined is-black is-uppercase is-text-subtitle has-text-black is-shadowless m-2"
+            className="is-uppercase is-text-subtitle has-text-black is-shadowless m-2"
           >
             See Product
           </button>

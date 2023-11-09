@@ -133,6 +133,13 @@ letter-spacing: -0.214px;
   overflow: hidden;
 }
 
+.image.is-absolute {
+  position: absolute;
+  top: 70%; /* This will move the top of the image to the middle of the container */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust to center the image perfectly */
+}
+
 .image-container img {
   margin-top: -50px; /* Amount to cut off from the top */
 }
