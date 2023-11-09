@@ -82,6 +82,7 @@ function App() {
         <NavBar />
         <CartModal />
         <MenuModal />
+        <div className="content-wrapper">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route
@@ -115,7 +116,7 @@ function App() {
             <About />
           </>
         )}
-
+        </div>
         <Footer />
       </StateContext.Provider>
     </div>

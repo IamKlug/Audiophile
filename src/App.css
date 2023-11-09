@@ -118,8 +118,10 @@ letter-spacing: -0.214px;
 }
 
 .is-width-10{
-  width: 100%;
+  width: 100vw;
 }
+
+
 
 .is-transform-y-below-nav {
   transform: translateY(57px);
@@ -241,4 +243,17 @@ letter-spacing: -0.214px;
 
 
 }
+}
+
+@media (min-width: 769px) {
+  .content-wrapper{
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  .full-width-header {
+    width: calc(100% + 6rem); /* Assuming mx-6 applies 3rem margins on each side */
+    margin-left: -3rem; /* Offset the left margin */
+    margin-right: -3rem; /* Offset the right margin */
+  }
 }

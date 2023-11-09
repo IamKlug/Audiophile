@@ -11,7 +11,7 @@ export default function ProductCategoryPage() {
   console.log(category)
   return (
     <>
-      <h4 className="has-text-centered p-5 is-text-h4 is-uppercase has-text-white has-background-black">
+      <h4 className="full-width-header has-text-centered p-5 is-text-h4 is-uppercase has-text-white has-background-black">
         {category}
       </h4>
       {selectedProductByType.map((product) => (

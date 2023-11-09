@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <div className="is-flex is-flex-direction-column is-justify-content-center is-relative is-align-items-center">
-        <div className="image-container">
+        <div className="image-container full-width-header">
           <img
             className=""
             src={`assets/home/${screenSize}/image-header.jpg`}
