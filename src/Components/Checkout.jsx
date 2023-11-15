@@ -73,9 +73,9 @@ export default function Checkout() {
                 <p className="is-text-body has-text-white has-text-weight-bold">
                   $
                   {cart.reduce(
-                    (acc, item) => acc + item.product.price * item.quantity,
+                    (acc, item) => acc + item.product.price * item.quantity * 1.2 + 50,
                     0
-                  )}
+                  ).toFixed()}
                 </p>
               </div>
               </div>
