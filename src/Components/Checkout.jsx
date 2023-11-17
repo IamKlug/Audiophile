@@ -3,7 +3,7 @@ import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Checkout() {
-  const { cart } = useContext(StateContext);
+  const { cart, setCart } = useContext(StateContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigate = useNavigate();
@@ -81,7 +81,10 @@ export default function Checkout() {
               </div>
 
             <button className="button is-flex is-flex-grow-1 has-primary-orange-background is-uppercase has-primary-orange-background is-text-subtitle has-text-white is-shadowless p-5 my-4"
-                onClick={() => navigate('/')}>
+                onClick={() => {
+                  navigate('/')
+                  setCart([])
+                  }}>
             Back to home
             </button>
           </div>
@@ -99,18 +102,22 @@ export default function Checkout() {
             Billing Details
           </h6>
           <label className="label is-text-label">Name</label>
-          <input className="input mb-2" type="text" placeholder="Alexei Ward" />
+          <input className="input mb-2" type="text" placeholder="Alexei Ward" required />
           <label className="label is-text-label">Email Address</label>
           <input
             className="input mb-2"
             type="text"
             placeholder="alexei@mail.com"
+            required
           />
           <label className="label is-text-label">Phone Number</label>
           <input
             className="input mb-2"
-            type="text"
-            placeholder="+1 202-555-0136"
+            type="tel" 
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            placeholder="202-555-0136"
+
+            required
           />
           <h6 className="is-text-subtitle has-text-primary-orange is-uppercase mb-3">
             Shiping Info
@@ -120,16 +127,18 @@ export default function Checkout() {
             className="input mb-2"
             type="text"
             placeholder="1137 Williams Avenue"
+            required
           />
           <label className="label is-text-label">ZIP Code</label>
-          <input className="input mb-2" type="text" placeholder="10001" />
+          <input className="input mb-2" type="text" placeholder="10001" required />
           <label className="label is-text-label">City</label>
-          <input className="input mb-2" type="text" placeholder="New York" />
+          <input className="input mb-2" type="text" placeholder="New York" required />
           <label className="label is-text-label">Country</label>
           <input
             className="input mb-2"
             type="text"
             placeholder="United States"
+            required
           />
           <h6 className="is-text-subtitle has-text-primary-orange is-uppercase mb-3">
             Payment Details
@@ -145,9 +154,9 @@ export default function Checkout() {
             </label>
           </div>
           <label className="label is-text-label">e-Money Number</label>
-          <input className="input mb-2" type="text" placeholder="238521993" />
+          <input className="input mb-2" type="text" placeholder="238521993" minLength='9' maxLength='9' />
           <label className="label is-text-label">e-Money PIN</label>
-          <input className="input mb-2" type="text" placeholder="6891" />
+          <input className="input mb-2" type="text" placeholder="6891" minLength='4' maxLength='4' />
         </div>
 
         <div className=" has-background-white is-flex is-flex-direction-column is-flex-grow-1 is-shadowless p-3 m-3 mb-6">
